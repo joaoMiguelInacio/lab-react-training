@@ -1,12 +1,13 @@
 function Greetings(props) {
+    const {lang, children} = props;
     return (
         <div>
             <p>{
-                props.lang === "de" ? 'Hallo' 
-                : props.lang === "fr" ?'Bonjour'
-                    : props.lang === "pt" ?'Olá'
-                        : props.lang === "es" ?'Hola'
-                            :'Hello'} {props.children}!</p>
+                lang === "de" ? 'Hallo' 
+                : lang === "fr" ?'Bonjour'
+                    : lang === "pt" ?'Olá'
+                        : lang === "es" ?'Hola'
+                            :'Hello'} {children}!</p>
         </div>
     )
 }
