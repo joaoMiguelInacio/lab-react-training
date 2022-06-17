@@ -1,5 +1,20 @@
 import './App.css';
 
+//Iteration4
+//
+// import BoxColor from './components/BoxColor'
+//
+// function App(){
+//   return (
+//     <>
+//       <BoxColor r={255} g={0} b={0} />
+//       <BoxColor r={0} g={71} b={171} />
+//       <BoxColor r={128} g={36} b={86} />
+//     </>
+//   )
+// }
+
+
 // Iteration3
 // 
 // import Random from './components/Random';
