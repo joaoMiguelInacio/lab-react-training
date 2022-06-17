@@ -1,5 +1,3 @@
-
-
 function BoxColor(props) {
     function componentToHex(c) {
         var hex = c.toString(16);
