@@ -1,7 +1,24 @@
 import './App.css';
 
+// Iteration2
+//
+// import Greetings from './components/Greetings';
+
+// function App() {
+//   return (
+//     <>
+//     <Greetings lang={"de"}>Ludwig</Greetings>
+//     <Greetings lang={"fr"}>Francois</Greetings>
+//     <Greetings lang={"es"}>Diego</Greetings>
+//     <Greetings lang={"pt"}>Gabriel</Greetings>
+//     <Greetings>Mr.Bean</Greetings>
+//     </>
+//   );
+// }
+
+
 // Iteration1
-// 
+//
 // import it1Data from './data/iteration1.json';
 // import IdCard from './components/IdCard';
 //
