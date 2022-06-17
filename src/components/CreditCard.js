@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
 function CreditCard(props) {
-  let hiddenNumbers = `${props.number}`
+
+  const { type, number, expirationMonth, expirationYear, bank, owner, bgColor, color } = props;
+
+  let hiddenNumbers = `${number}`
     .replace(/[0-9](?=([0-9]{4}))/g, '*')
     .match(/.{1,4}/g)
     .join(' ');
 
-  let shownNumbers = `${props.number}`
+  let shownNumbers = `${number}`
     .match(/.{1,4}/g)
     .join(' ');
 
@@ -18,8 +21,8 @@ function CreditCard(props) {
         display: `flex`,
         flexDirection: `column`,
         width: 600,
-        backgroundColor: `${props.bgColor}`,
-        color: `${props.color}`,
+        backgroundColor: `${bgColor}`,
+        color: `${color}`,
       }}
     >
       <p
@@ -27,7 +30,7 @@ function CreditCard(props) {
           alignSelf: `flex-end`,
         }}
       >
-        {props.type === `Visa` ? (
+        {type === `Visa` ? (
           <img
             style={{ width: 65, height: 30, paddingRight: 20 }}
             src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1655465085/Random/visa-logo-png-453454_wnxju7.png"
@@ -58,12 +61,12 @@ function CreditCard(props) {
       <div style={{ paddingLeft: 20 }}>
         <p style={{ margin: 0 }}>
           Expires{` `}
-          {props.expirationMonth.toString().length === 1
-            ? `0${props.expirationMonth}`
-            : props.expirationMonth}
-          /{props.expirationYear} {props.bank}
+          {expirationMonth.toString().length === 1
+            ? `0${expirationMonth}`
+            : expirationMonth}
+          /{expirationYear} {bank}
         </p>
-        <p style={{ marginTop: 0 }}>{props.owner}</p>
+        <p style={{ marginTop: 0 }}>{owner}</p>
       </div>
     </div>
   );
