@@ -1,16 +1,17 @@
 function IdCard(props) {
+  const {picture, firstName, lastName, gender, height} = props.data;
     return (
       <div className="id-card">
         <img
           className="picture"
-          src={props.data.picture}
-          alt={props.data.firstName}
+          src={picture}
+          alt={firstName}
         />
         <div className="data">
-          <p>First Name: {props.data.firstName}</p>
-          <p>Last Name: {props.data.lastName}</p>
-          <p>Gender: {props.data.gender}</p>
-          <p>Height: {props.data.height}</p>
+          <p>First Name: {firstName}</p>
+          <p>Last Name: {lastName}</p>
+          <p>Gender: {gender}</p>
+          <p>Height: {height}</p>
           <p>Birth: {props.birthDate.toString()} </p>
         </div>
       </div>
