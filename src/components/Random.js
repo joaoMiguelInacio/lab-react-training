@@ -1,7 +1,8 @@
 function Random(props) {
+    const {max, min} = props;
     return (
         <p>
-            Random Value between {props.min} and {props.max} => {Math.floor(Math.random() * (props.max - props.min) + props.min)}
+            Random Value between {min} and {max} => {Math.floor(Math.random() * (max - min) + min)}
         </p>
     )
 }
