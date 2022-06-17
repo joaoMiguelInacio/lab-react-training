@@ -1,17 +1,31 @@
 import './App.css';
 
-//Iteration8
+//Iteration9
+//
+import ClickablePicture from './components/ClickablePicture'
 
-import LikeButton from './components/LikeButton';
-
-function App (){
+function App(){
     return (
-        <>
-        <LikeButton />
-        <LikeButton />
-        </>  
+        <ClickablePicture
+        img='https://res.cloudinary.com/dvru7nv6q/image/upload/v1655484910/Random/maxence_ayoa9o.png'
+        imgClicked='https://res.cloudinary.com/dvru7nv6q/image/upload/v1655484910/Random/maxence-glasses_iosrty.png'
+        />
     )
 }
+
+//Iteration8
+//
+// import LikeButton from './components/LikeButton';
+//
+// function App (){
+//     return (
+//         <>
+//         <LikeButton />
+//         <LikeButton />
+//         </>  
+//     )
+// }
+
 
 //Iteration7
 // import DriverCard from './components/DriverCard';
