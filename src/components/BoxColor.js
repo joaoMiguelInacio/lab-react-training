@@ -1,4 +1,5 @@
 function BoxColor(props) {
+    const {r, g, b} = props;
     function componentToHex(c) {
         var hex = c.toString(16);
         return hex.length === 1 ? "0" + hex : hex;
@@ -9,11 +10,11 @@ function BoxColor(props) {
     const divStyle = {
         color: 'white',
         padding: 50,
-        backgroundColor : `rgb(${props.r}, ${props.g}, ${props.b})`
+        backgroundColor : `rgb(${r}, ${g}, ${b})`
     };
     return (
         <p style={divStyle}>
-            rgb({props.r}, {props.g}, {props.b}), {rgbToHex(`${props.r}`, `${props.g}`,`${props.b}`)}
+            rgb({r}, {g}, {b}), {rgbToHex(`${r}`, `${g}`,`${b}`)}
         </p>
     )
 }
