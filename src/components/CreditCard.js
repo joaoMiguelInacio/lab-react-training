@@ -6,26 +6,9 @@ function CreditCard(props) {
     .match(/.{1,4}/g)
     .join(' ');
 
-  let variable = 'a';
-
-  function hideNumbers() {
-    hiddenNumbers = `${props.number}`
-      .replace(/[0-9](?=([0-9]{4}))/g, '*')
-      .match(/.{1,4}/g)
-      .join(' ');
-    variable = 'a';
-    console.log(variable);
-    setState(hiddenNumbers);
-  }
-
-  function showMeTheMoney() {
-    let shownNumbers = `${props.number}`
-        .match(/.{1,4}/g)
-        .join(' ');
-    variable = 'b';
-    console.log(variable);
-    setState(shownNumbers);
-  }
+  let shownNumbers = `${props.number}`
+    .match(/.{1,4}/g)
+    .join(' ');
 
   const [numbers, setState] = useState(hiddenNumbers);
 
@@ -69,9 +52,7 @@ function CreditCard(props) {
             backgroundImage: `url(https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-vector-eye-icon-png-image_515473.jpg)`,
             backgroundSize: `contain`,
           }}
-          onClick={() => {
-            variable === 'a' ? showMeTheMoney() : hideNumbers();
-          }}
+          onClick={() => setState(numbers === hiddenNumbers ? shownNumbers : hiddenNumbers)}
         ></button>
       </p>
       <div style={{ paddingLeft: 20 }}>
