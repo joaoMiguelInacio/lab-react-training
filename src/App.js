@@ -1,9 +1,24 @@
 import './App.css';
 
+// Iteration3
+// 
+// import Random from './components/Random';
+//
+// function App() {
+//   return (
+//     <>
+//       <Random min={1} max={6}/>
+//       <Random min={1} max={100}/>
+//       <Random min={50} max={100}/>
+//     </>
+//   );
+// }
+
+
 // Iteration2
 //
 // import Greetings from './components/Greetings';
-
+//
 // function App() {
 //   return (
 //     <>
