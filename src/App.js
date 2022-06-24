@@ -1,32 +1,58 @@
 import './App.css';
 
-//Iteration11
-
-import { useState } from 'react';
-import Carousel from './components/Carousel';
+// Iteration 12
+//
+import NumbersTable from './components/NumbersTable';
+import Number from './components/Number';
 
 function App(){
-    const [urlIndex, changeUrl] = useState(0);
-    const imagesUrl = [
-        'https://images.unsplash.com/photo-1431512284068-4c4002298068?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80',
-        'https://images.unsplash.com/photo-1596900520965-3112ea0e4eb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        'https://images.unsplash.com/photo-1596888478388-f30179f48a72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
-        'https://images.unsplash.com/photo-1635184098438-67f39704abb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80'
-    ];
-    function nextImage () {
-        changeUrl(urlIndex === imagesUrl.length -1 ? 0 : urlIndex +1);
-    }
-    function prevImage () {
-        changeUrl(urlIndex === 0 ? imagesUrl.length - 1 : urlIndex - 1);
-    }
-    return (       
-        <Carousel
-            imageUrl={imagesUrl[urlIndex]}
-            nextImage = {nextImage}
-            prevImage = {prevImage}
-        />
+    const displayNumbers = () => {
+        let limit = 12;
+        let numbers = [];
+        numbers.length = limit;
+        for (let i=0; i< numbers.length; i++){
+          numbers[i] = i+1;
+        }
+        return numbers.map((number) => {
+          return (
+            <Number number = {number}/>
+          );
+        });
+      };
+    return (
+        <NumbersTable displayNumbers={displayNumbers}/>
     )
 }
+
+
+// Iteration11
+//
+// import { useState } from 'react';
+// import Carousel from './components/Carousel';
+//
+// function App(){
+//     const [urlIndex, changeUrl] = useState(0);
+//     const imagesUrl = [
+//         'https://images.unsplash.com/photo-1431512284068-4c4002298068?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80',
+//         'https://images.unsplash.com/photo-1596900520965-3112ea0e4eb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+//         'https://images.unsplash.com/photo-1596888478388-f30179f48a72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+//         'https://images.unsplash.com/photo-1635184098438-67f39704abb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80'
+//     ];
+//     function nextImage () {
+//         changeUrl(urlIndex === imagesUrl.length -1 ? 0 : urlIndex +1);
+//     }
+//     function prevImage () {
+//         changeUrl(urlIndex === 0 ? imagesUrl.length - 1 : urlIndex - 1);
+//     }
+//     return (       
+//         <Carousel
+//             imageUrl={imagesUrl[urlIndex]}
+//             nextImage = {nextImage}
+//             prevImage = {prevImage}
+//         />
+//     )
+// }
+
 
 //Iteration10
 //
@@ -69,6 +95,7 @@ function App(){
 //         <Dice url={url} rollDice = {rollDice} />
 //     )
 // }
+
 
 //Iteration9
 //
