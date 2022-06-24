@@ -1,52 +1,65 @@
 import './App.css';
-import { useState } from "react";
-// Iteration 15
-//
-import SignUpForm from "./components/SignUpForm"
 
-function App() {
-  const [divInnerHTML, rewriteDivInnerHTML] = useState(<></>);
-  function handleFormInput (values){
-    if (!values){
-      return (
-        divInnerHTML
-      )
-    } else {
-      console.log("handleFormInput function, app.js", values);
-      let salutation = "";
-      switch(values.nationality) {
-        case "de":
-          salutation = "hallo";
-          break;
-        case "fr":
-          salutation = "bonjour";
-          break;
-        default:
-          salutation = "hello";
-      }
-      rewriteDivInnerHTML(
-        <div>
-          <hr/>
-          <p>
-            {salutation}
-          </p>
-          <p>
-            Your email address is: {values.email}
-          </p>
-          <p>
-            Your email address is correct
-          </p>
-        </div>
-      )
-    }
-  }
+// LAST Iteration
+import RGBColorPicker from "./components/RGBColorPicker";
+
+function App () {
   return (
     <>
-      <SignUpForm handleFormInput = {handleFormInput}/>
-      {handleFormInput ()}
+      <RGBColorPicker />
     </>
-  );
+  )
 }
+
+
+// Iteration 15
+//
+// import { useState } from "react";
+// import SignUpForm from "./components/SignUpForm";
+//
+// function App() {
+//   const [divInnerHTML, rewriteDivInnerHTML] = useState(<></>);
+//   function handleFormInput (values){
+//     if (!values){
+//       return (
+//         divInnerHTML
+//       )
+//     } else {
+//       console.log("handleFormInput function, app.js", values);
+//       let salutation = "";
+//       switch(values.nationality) {
+//         case "de":
+//           salutation = "hallo";
+//           break;
+//         case "fr":
+//           salutation = "bonjour";
+//           break;
+//         default:
+//           salutation = "hello";
+//       }
+//       rewriteDivInnerHTML(
+//         <div>
+//           <hr/>
+//           <p>
+//             {salutation}
+//           </p>
+//           <p>
+//             Your email address is: {values.email}
+//           </p>
+//           <p>
+//             Your email address is correct
+//           </p>
+//         </div>
+//       )
+//     }
+//   }
+//   return (
+//     <>
+//       <SignUpForm handleFormInput = {handleFormInput}/>
+//       {handleFormInput ()}
+//     </>
+//   );
+// }
 
 
 // Iteration 13 and 14
