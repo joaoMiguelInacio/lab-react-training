@@ -2,7 +2,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 export default function Carousel({imageUrl, prevImage, nextImage}) {
     return (
-        <>
+        < div style={{display: "flex", alignItems: "center", position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}} >
             <FaChevronLeft
                 onClick={prevImage}
             />
@@ -10,6 +10,6 @@ export default function Carousel({imageUrl, prevImage, nextImage}) {
             <FaChevronRight
                 onClick={nextImage}
             />
-        </>
+        </div>
     );
 }
