@@ -1,17 +1,96 @@
 import './App.css';
 
+//Iteration11
+//
+// import { useState } from 'react';
+// import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+// import Carousel from './components/Carousel';
+//
+// function App(){
+//     const [urlIndex, changeUrl] = useState(0);
+//     const imagesUrl = [
+//         'https://images.unsplash.com/photo-1431512284068-4c4002298068?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80',
+//         'https://images.unsplash.com/photo-1596900520965-3112ea0e4eb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+//         'https://images.unsplash.com/photo-1596888478388-f30179f48a72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+//         'https://images.unsplash.com/photo-1635184098438-67f39704abb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80'
+//     ];
+//     function nextImage () {
+//         changeUrl(urlIndex === imagesUrl.length -1 ? 0 : urlIndex +1);
+//     }
+//     function prevImage () {
+//         changeUrl(urlIndex === 0 ? imagesUrl.length - 1 : urlIndex - 1);
+//     }
+//     return (
+//         <>
+//         <FaChevronLeft
+//             onClick={prevImage}
+//         />
+//         <Carousel
+//             imageUrl={imagesUrl[urlIndex]}
+//         />
+//         <FaChevronRight
+//             onClick={nextImage}
+//         />
+//         </>
+        
+//     )
+// }
+
+//Iteration10
+//
+// import Dice from './components/Dice';
+// import { useState } from 'react';
+//
+// function App(){
+//     const [url, changeUrl] = useState("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499698/Random/dice-empty_fc1fnr.png");
+//     function rollDice () {
+//         changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499698/Random/dice-empty_fc1fnr.png");
+//         setTimeout(() => {
+//             switch(Math.floor(Math.random() * 6)) {
+//                 case 0:
+//                     changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499698/Random/dice-empty_fc1fnr.png");
+//                   break;
+//                 case 1:
+//                     changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499698/Random/dice1_nhdc1m.png");
+//                   break;
+//                 case 2:
+//                     changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499699/Random/dice2_hxed0z.png");
+//                 break;
+//                 case 3:
+//                     changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499699/Random/dice3_j8mbtg.png");
+//                 break;
+//                 case 4:
+//                     changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499699/Random/dice4_oemjni.png");
+//                 break;
+//                 case 5:
+//                     changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499699/Random/dice5_zcd6je.png");
+//                 break;
+//                 case 6:
+//                     changeUrl("https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499699/Random/dice6_g6zizw.png");
+//                 break;
+//                 default:
+//                   console.log("the dice fell off the table, roll again!");
+//               }
+//         }, 1000);
+//     }
+//     return (
+//         <Dice url={url} rollDice = {rollDice} />
+//     )
+// }
+
 //Iteration9
 //
-import ClickablePicture from './components/ClickablePicture'
+// import ClickablePicture from './components/ClickablePicture';
+//
+// function App(){
+//     return (
+//         <ClickablePicture
+//         img='https://res.cloudinary.com/dvru7nv6q/image/upload/v1655484910/Random/maxence_ayoa9o.png'
+//         imgClicked='https://res.cloudinary.com/dvru7nv6q/image/upload/v1655484910/Random/maxence-glasses_iosrty.png'
+//         />
+//     )
+// }
 
-function App(){
-    return (
-        <ClickablePicture
-        img='https://res.cloudinary.com/dvru7nv6q/image/upload/v1655484910/Random/maxence_ayoa9o.png'
-        imgClicked='https://res.cloudinary.com/dvru7nv6q/image/upload/v1655484910/Random/maxence-glasses_iosrty.png'
-        />
-    )
-}
 
 //Iteration8
 //
@@ -28,6 +107,7 @@ function App(){
 
 
 //Iteration7
+//
 // import DriverCard from './components/DriverCard';
 // 
 // function App (){
@@ -75,7 +155,7 @@ function App(){
 
 
 //Iteration5
-//
+// 
 // import CreditCard from './components/CreditCard';
 //
 // function App(){
@@ -118,7 +198,7 @@ function App(){
 
 //Iteration4
 //
-// import BoxColor from './components/BoxColor'
+// import BoxColor from './components/BoxColor';
 //
 // function App(){
 //   return (

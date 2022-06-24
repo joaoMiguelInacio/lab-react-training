@@ -33,13 +33,13 @@ function CreditCard(props) {
         {type === `Visa` ? (
           <img
             style={{ width: 65, height: 30, paddingRight: 20 }}
-            src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1655465085/Random/visa-logo-png-453454_wnxju7.png"
+            src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499709/Random/visa_pdpag0.png"
             alt="/public/visa-logo-png-453454.png"
           />
         ) : (
           <img
             style={{ width: 65, height: 30, paddingRight: 20 }}
-            src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1655465084/Random/mastercard-logo-png-453454_cowb35.png"
+            src="https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499698/Random/master-card_qzu31n.svg"
             alt="/public/mastercard-logo-png-453454.png"
           />
         )}
