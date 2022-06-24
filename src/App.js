@@ -1,44 +1,91 @@
 import './App.css';
-
-// Iteration 13 and 14
-
-import data from './data/berlin.json';
-import FacebookCard from './components/FacebookCard';
-import CountryButton from './components/CountryButton';
-import { useState } from 'react';
+import { useState } from "react";
+// Iteration 15
+//
+import SignUpForm from "./components/SignUpForm"
 
 function App() {
-  const [clickledCountry, updateClickedCountry] = useState("");
-  const displayCards = () => {
-    return data.map((user) => {
-      return <FacebookCard user={user} clickledCountry = {clickledCountry} />;
-    });
-  };
-  const displayButtons = () => {
-    let countries = [];
-    data.forEach(element => {
-      if (!countries.includes(element.country)){
-        countries.push(element.country);
-      } 
-    });
-    return countries.map((country) => {
-      return <CountryButton country = {country} handleButtons = {handleButtons} />;
-    });
-  };
-  const handleButtons = (country) => {
-    updateClickedCountry (country);
-    };
-
+  const [divInnerHTML, rewriteDivInnerHTML] = useState(<></>);
+  function handleFormInput (values){
+    if (!values){
+      return (
+        divInnerHTML
+      )
+    } else {
+      console.log("handleFormInput function, app.js", values);
+      let salutation = "";
+      switch(values.nationality) {
+        case "de":
+          salutation = "hallo";
+          break;
+        case "fr":
+          salutation = "bonjour";
+          break;
+        default:
+          salutation = "hello";
+      }
+      rewriteDivInnerHTML(
+        <div>
+          <hr/>
+          <p>
+            {salutation}
+          </p>
+          <p>
+            Your email address is: {values.email}
+          </p>
+          <p>
+            Your email address is correct
+          </p>
+        </div>
+      )
+    }
+  }
   return (
     <>
-      {displayButtons()}
-      {displayCards()}
+      <SignUpForm handleFormInput = {handleFormInput}/>
+      {handleFormInput ()}
     </>
   );
 }
 
+
+// Iteration 13 and 14
 //
+// import data from './data/berlin.json';
+// import FacebookCard from './components/FacebookCard';
+// import CountryButton from './components/CountryButton';
+// import { useState } from 'react';
 //
+// function App() {
+//   const [clickledCountry, updateClickedCountry] = useState("");
+//   const displayCards = () => {
+//     return data.map((user) => {
+//       return <FacebookCard user={user} clickledCountry = {clickledCountry} />;
+//     });
+//   };
+//   const displayButtons = () => {
+//     let countries = [];
+//     data.forEach(element => {
+//       if (!countries.includes(element.country)){
+//         countries.push(element.country);
+//       }
+//     });
+//     return countries.map((country) => {
+//       return <CountryButton country = {country} handleButtons = {handleButtons} />;
+//     });
+//   };
+//   const handleButtons = (country) => {
+//     updateClickedCountry (country);
+//     };
+//   return (
+//     <>
+//       {displayButtons()}
+//       {displayCards()}
+//     </>
+//   );
+// }
+
+
 // Iteration 12
 //
 // import NumbersTable from './components/NumbersTable';
@@ -62,6 +109,7 @@ function App() {
 //         <NumbersTable displayNumbers={displayNumbers}/>
 //     )
 // }
+
 
 // Iteration11
 //
