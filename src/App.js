@@ -1,28 +1,49 @@
 import './App.css';
+//
+// Iteration 13
+import data from './data/berlin.json';
+import FacebookCard from './components/FacebookCard';
 
+function App() {
+  const displayCards = () => {
+            return data.map((user) => {
+              return (
+                <FacebookCard user = {user}/>
+              );
+            });
+          };
+    return (
+      <>
+        {displayCards ()}
+      </>
+    );
+}
+
+//
+//
 // Iteration 12
 //
-import NumbersTable from './components/NumbersTable';
-import Number from './components/Number';
-
-function App(){
-    const displayNumbers = () => {
-        let limit = 12;
-        let numbers = [];
-        numbers.length = limit;
-        for (let i=0; i< numbers.length; i++){
-          numbers[i] = i+1;
-        }
-        return numbers.map((number) => {
-          return (
-            <Number number = {number}/>
-          );
-        });
-      };
-    return (
-        <NumbersTable displayNumbers={displayNumbers}/>
-    )
-}
+// import NumbersTable from './components/NumbersTable';
+// import Number from './components/Number';
+//
+// function App(){
+//     const displayNumbers = () => {
+//         let limit = 12;
+//         let numbers = [];
+//         numbers.length = limit;
+//         for (let i=0; i< numbers.length; i++){
+//           numbers[i] = i+1;
+//         }
+//         return numbers.map((number) => {
+//           return (
+//             <Number number = {number}/>
+//           );
+//         });
+//       };
+//     return (
+//         <NumbersTable displayNumbers={displayNumbers}/>
+//     )
+// }
 
 
 // Iteration11
@@ -278,8 +299,8 @@ function App(){
 
 // Props
 //
-//import data from './data/berlin.json';
-//import IdCardProps from './components/IdCardProps';
+// import data from './data/berlin.json';
+// import IdCardProps from './components/IdCardProps';
 //
 // function App() {
 //     return (
