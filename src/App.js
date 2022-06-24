@@ -1,22 +1,40 @@
 import './App.css';
-//
-// Iteration 13
+
+// Iteration 13 and 14
+
 import data from './data/berlin.json';
 import FacebookCard from './components/FacebookCard';
+import CountryButton from './components/CountryButton';
+import { useState } from 'react';
 
 function App() {
+  const [clickledCountry, updateClickedCountry] = useState("");
   const displayCards = () => {
-            return data.map((user) => {
-              return (
-                <FacebookCard user = {user}/>
-              );
-            });
-          };
-    return (
-      <>
-        {displayCards ()}
-      </>
-    );
+    return data.map((user) => {
+      return <FacebookCard user={user} clickledCountry = {clickledCountry} />;
+    });
+  };
+  const displayButtons = () => {
+    let countries = [];
+    data.forEach(element => {
+      if (!countries.includes(element.country)){
+        countries.push(element.country);
+      } 
+    });
+    return countries.map((country) => {
+      return <CountryButton country = {country} handleButtons = {handleButtons} />;
+    });
+  };
+  const handleButtons = (country) => {
+    updateClickedCountry (country);
+    };
+
+  return (
+    <>
+      {displayButtons()}
+      {displayCards()}
+    </>
+  );
 }
 
 //
@@ -45,7 +63,6 @@ function App() {
 //     )
 // }
 
-
 // Iteration11
 //
 // import { useState } from 'react';
@@ -65,7 +82,7 @@ function App() {
 //     function prevImage () {
 //         changeUrl(urlIndex === 0 ? imagesUrl.length - 1 : urlIndex - 1);
 //     }
-//     return (       
+//     return (
 //         <Carousel
 //             imageUrl={imagesUrl[urlIndex]}
 //             nextImage = {nextImage}
@@ -73,7 +90,6 @@ function App() {
 //         />
 //     )
 // }
-
 
 //Iteration10
 //
@@ -117,7 +133,6 @@ function App() {
 //     )
 // }
 
-
 //Iteration9
 //
 // import ClickablePicture from './components/ClickablePicture';
@@ -131,7 +146,6 @@ function App() {
 //     )
 // }
 
-
 //Iteration8
 //
 // import LikeButton from './components/LikeButton';
@@ -141,15 +155,14 @@ function App() {
 //         <>
 //         <LikeButton />
 //         <LikeButton />
-//         </>  
+//         </>
 //     )
 // }
-
 
 //Iteration7
 //
 // import DriverCard from './components/DriverCard';
-// 
+//
 // function App (){
 //     return (
 //         <>
@@ -170,11 +183,10 @@ function App() {
 //                     model: "Audi A3",
 //                     licensePlate: "BE33ER"
 //                 }}
-//             />  
-//         </>  
+//             />
+//         </>
 //     )
 // }
-
 
 // Iteration6
 //
@@ -188,14 +200,13 @@ function App() {
 //             <Rating>1.5</Rating>
 //             <Rating>3</Rating>
 //             <Rating>4</Rating>
-//             <Rating>5</Rating>    
-//         </>  
+//             <Rating>5</Rating>
+//         </>
 //     )
 // }
 
-
 //Iteration5
-// 
+//
 // import CreditCard from './components/CreditCard';
 //
 // function App(){
@@ -209,7 +220,7 @@ function App() {
 //             bank="BNP"
 //             owner="Maxence Bouret"
 //             bgColor="#11aa99"
-//             color="white" 
+//             color="white"
 //         />
 //         <CreditCard
 //             type="Master Card"
@@ -220,7 +231,7 @@ function App() {
 //             owner="Maxence Bouret"
 //             bgColor="#eeeeee"
 //             color="#222222"
-//         /> 
+//         />
 //         <CreditCard
 //             type="Visa"
 //             number="0123456789016984"
@@ -229,12 +240,11 @@ function App() {
 //             bank="Name of the Bank"
 //             owner="Firstname Lastname"
 //             bgColor="#ddbb55"
-//             color="white" 
+//             color="white"
 //         />
 //     </>
 //   )
 // }
-
 
 //Iteration4
 //
@@ -250,9 +260,8 @@ function App() {
 //   )
 // }
 
-
 // Iteration3
-// 
+//
 // import Random from './components/Random';
 //
 // function App() {
@@ -264,7 +273,6 @@ function App() {
 //     </>
 //   );
 // }
-
 
 // Iteration2
 //
@@ -281,7 +289,6 @@ function App() {
 //     </>
 //   );
 // }
-
 
 // Iteration1
 //
