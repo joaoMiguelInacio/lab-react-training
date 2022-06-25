@@ -1,6 +1,6 @@
 import './App.css';
 
-// LAST Iteration
+/* // LAST Iteration
 import RGBColorPicker from "./components/RGBColorPicker";
 
 function App () {
@@ -9,7 +9,7 @@ function App () {
       <RGBColorPicker />
     </>
   )
-}
+} */
 
 
 // Iteration 15
@@ -18,6 +18,7 @@ function App () {
 // import SignUpForm from "./components/SignUpForm";
 //
 // function App() {
+  /* For the sake of consistency, always use useStates according to convention (ex.: books, setBooks) */
 //   const [divInnerHTML, rewriteDivInnerHTML] = useState(<></>);
 //   function handleFormInput (values){
 //     if (!values){
@@ -108,6 +109,7 @@ function App () {
 //     const displayNumbers = () => {
 //         let limit = 12;
 //         let numbers = [];
+/* Always chose to use array methods and not for loops, they're more efficient. */
 //         numbers.length = limit;
 //         for (let i=0; i< numbers.length; i++){
 //           numbers[i] = i+1;
@@ -125,6 +127,8 @@ function App () {
 
 
 // Iteration11
+
+/* Also, great job! */
 //
 // import { useState } from 'react';
 // import Carousel from './components/Carousel';
@@ -153,6 +157,8 @@ function App () {
 // }
 
 //Iteration10
+
+/* Great job! */
 //
 // import Dice from './components/Dice';
 // import { useState } from 'react';
@@ -355,7 +361,7 @@ function App () {
 //
 // import it1Data from './data/iteration1.json';
 // import IdCard from './components/IdCard';
-//
+
 // function App() {
 //   return (
 //     <div className="cards-container">
@@ -366,10 +372,10 @@ function App () {
 // }
 
 // Props
-//
+
 // import data from './data/berlin.json';
 // import IdCardProps from './components/IdCardProps';
-//
+
 // function App() {
 //     return (
 //       <div className="cards-container">

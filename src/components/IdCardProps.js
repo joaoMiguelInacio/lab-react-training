@@ -1,4 +1,5 @@
 function IdCardProps(props) {
+  
   const {isStudent, img, firstName, lastName, country} = props.data;
   return (
     <div

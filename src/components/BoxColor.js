@@ -1,6 +1,7 @@
 function BoxColor(props) {
     const {r, g, b} = props;
     function componentToHex(c) {
+        /* Please never use var, just let or const. var leads to many code errors */
         var hex = c.toString(16);
         return hex.length === 1 ? "0" + hex : hex;
     } 

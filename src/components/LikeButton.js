@@ -8,6 +8,8 @@ function LikeButton() {
   const [color2, changeColorState2] = useState(colors[0]);
   const [textcolor1, changeTextColor1] = useState('white');
   const [textcolor2, changeTextColor2] = useState('white');
+
+  /* The 2 functions bellow look exactly the same. They should be turned into only 1, dynamic. */
   function changeColor1Function() {
     changeTextColor1('white');
     const toRemove = colors.indexOf(color1);

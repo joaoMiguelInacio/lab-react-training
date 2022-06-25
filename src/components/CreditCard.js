@@ -1,3 +1,5 @@
+/* Always avoid using inline styles. Use styles on css files everytime you can. */
+
 import React, { useState } from 'react';
 
 function CreditCard(props) {
@@ -13,7 +15,7 @@ function CreditCard(props) {
     .match(/.{1,4}/g)
     .join(' ');
 
-  const [numbers, setState] = useState(hiddenNumbers);
+  const [numbers, setNumbers] = useState(hiddenNumbers);
 
   return (
     <div
@@ -30,6 +32,13 @@ function CreditCard(props) {
           alignSelf: `flex-end`,
         }}
       >
+        {/* Instead of repeating the whole tag, just make the src conditional.
+        <img
+            style={{ width: 65, height: 30, paddingRight: 20 }}
+            src={type === `Visa` ? "https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499709/Random/visa_pdpag0.png" : "https://res.cloudinary.com/dvru7nv6q/image/upload/v1655499698/Random/master-card_qzu31n.svg"}
+            alt={type === `Visa` ? "/public/visa-logo-png-453454.png" : "/public/mastercard-logo-png-453454.png"}
+          />
+        */}
         {type === `Visa` ? (
           <img
             style={{ width: 65, height: 30, paddingRight: 20 }}
@@ -55,12 +64,13 @@ function CreditCard(props) {
             backgroundImage: `url(https://png.pngtree.com/png-vector/20190215/ourmid/pngtree-vector-eye-icon-png-image_515473.jpg)`,
             backgroundSize: `contain`,
           }}
-          onClick={() => setState(numbers === hiddenNumbers ? shownNumbers : hiddenNumbers)}
+          onClick={() => setNumbers(numbers === hiddenNumbers ? shownNumbers : hiddenNumbers)}
         ></button>
       </p>
       <div style={{ paddingLeft: 20 }}>
         <p style={{ margin: 0 }}>
           Expires{` `}
+          {/* So that your code is easier to read, avoid making these math operations inside tags. Do them in variables or funcions and use those here. */}
           {expirationMonth.toString().length === 1
             ? `0${expirationMonth}`
             : expirationMonth}
