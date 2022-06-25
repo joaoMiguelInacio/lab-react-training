@@ -252,7 +252,7 @@ function App () {
 // Iteration6
 //
 // import Rating from './components/Rating';
-//
+
 // function App (){
 //     return (
 //         <>
